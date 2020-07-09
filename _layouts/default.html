@@ -3,17 +3,22 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
   </head>
   <body>
     <header>
       {% include nav.html %}
     </header>
-    
-    <main>
-      {{ content }}
-      <div class="watermark">Nombre</div>
-    </main>
+    <div>
+      <a href="#" class="blog">Blog</a>
+      <main>
+        <h1 class="heading">{{ page.heading }}</h1>
+
+        {{ content }}
+        <div class="watermark">Nombre</div>
+      </main>
+    </div>
   </body>
 </html>

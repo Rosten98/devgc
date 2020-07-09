@@ -10,7 +10,7 @@ $bodyFont: 'Montserrat', sans-serif;
 }
 body {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 7fr;
 
   background: $backgroundColor;
   color: $bodyColor;
@@ -26,6 +26,11 @@ ul {
 a{
   text-decoration: none;
   color: unset;
+}
+
+main {
+  margin-top: 10em;
+  padding: 2em;
 }
 
 .nav {
@@ -49,26 +54,43 @@ a{
 
   .social-nav li {
     font-size: .9em;
-    padding: .3em 0;
+    padding: .5em 0;
   }
 
   a{
-    color: white; 
+    color: white;
   }
-  
+
   .current{
     text-decoration: underline;
     color: #5AEDAF;
   }
 }
+.heading {
+  width: 50%;
+}
 
+h1.heading:before {
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: 7px;
+  top: 5em;
+  background-color: #5AEDAF;
+}
+h1.heading {
+  margin-bottom: .7em;
+}
+p.heading {
+  font-size: 1.4em;
+}
 
 .watermark {
   position: fixed;
   top: 0;
   right: 10%;
   color: #242424;
-  font-size: 10em; 
+  font-size: 10em;
   letter-spacing: .2em;
   z-index: -1;
   white-space: nowrap;
@@ -77,3 +99,39 @@ a{
   text-orientation: upright;
 }
 
+.fab {
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+
+.projects{
+    margin-top: 6em;
+    .projects--title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .projects--content {
+      display: flex;
+      align-items: center;
+      a{
+        font-size: .9em;
+        color: #5AEDAF;
+        i{
+          margin-left: 1em;
+        }
+      }
+    }
+
+    .projects--card {
+      // display: inline-block;
+      // white-space: pre-wrap;
+      margin-top: 2em;
+      margin-right: 2em;
+      width: 220px;
+      height: 300px;
+      background: #191919;
+      border-radius: 1em;
+    }
+}
